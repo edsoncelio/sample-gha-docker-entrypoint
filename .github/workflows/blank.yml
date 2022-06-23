@@ -11,9 +11,9 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: omio/gcr.io.kaniko-project.executor:debug
+      image: gcr.io/kaniko-project/executor:debug
       options: --entrypoint ""
     steps:
       - name: Test cmd
-        run: /kaniko/executor --context .
+        run: /kaniko/executor --version
 
