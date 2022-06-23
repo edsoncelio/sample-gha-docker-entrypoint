@@ -15,5 +15,5 @@ jobs:
       options: --entrypoint ""
     steps:
       - name: Test cmd
-        run: env
+        run: /kaniko/executor --context .
 
