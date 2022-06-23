@@ -1,0 +1,19 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: hashicorp/terraform:1.2.3
+      options: --entrypoint ""
+    steps:
+      - name: Test cmd
+        run: terraform version
+
