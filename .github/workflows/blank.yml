@@ -15,5 +15,5 @@ jobs:
       options: --entrypoint ""
     steps:
       - name: Test cmd
-        run: /kaniko/executor --version
+        run: /kaniko/executor --context . --dockerfile "Dockerfile" --destination "test/nginx:latest"
 
