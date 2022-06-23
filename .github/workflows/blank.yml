@@ -11,9 +11,9 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: hashicorp/terraform:1.2.3
+      image: omio/gcr.io.kaniko-project.executor:debug
       options: --entrypoint ""
     steps:
       - name: Test cmd
-        run: terraform version
+        run: env
 
